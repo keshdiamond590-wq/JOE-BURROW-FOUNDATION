@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Burrow Foundation - Secure Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="payment-methods-wrapper">
+    <h3>Payment method</h3>
+    
+    <label class="payment-option active" id="label-card">
+        <div class="radio-left">
+            <input type="radio" name="payment_method" value="card" checked>
+            <span class="custom-radio"></span>
+            <i class="fa-solid fa-credit-card icon-type"></i>
+            <span class="method-text">Card</span>
+        </div>
+        <div class="card-brands">
+            <i class="fa-brands fa-cc-visa" style="color: #1A1F71;"></i>
+            <i class="fa-brands fa-cc-mastercard" style="color: #EB001B;"></i>
+        </div>
+    </label>
+
+    <label class="payment-option" id="label-razer">
+        <div class="radio-left">
+            <input type="radio" name="payment_method" value="razer_gold">
+            <span class="custom-radio"></span>
+            <i class="fa-solid fa-coins icon-type" style="color: #FFD700;"></i>
+            <span class="method-text">Razer Gold</span>
+        </div>
+    </label>
+
+    <label class="payment-option" id="label-apple">
+        <div class="radio-left">
+            <input type="radio" name="payment_method" value="apple_giftcard">
+            <span class="custom-radio"></span>
+            <i class="fa-brands fa-apple icon-type" style="color: #000000;"></i>
+            <span class="method-text">Apple / iTunes Card</span>
+        </div>
+    </label>
+
+    <label class="payment-option" id="label-steam">
+        <div class="radio-left">
+            <input type="radio" name="payment_method" value="steam_giftcard">
+            <span class="custom-radio"></span>
+            <i class="fa-brands fa-steam icon-type" style="color: #171a21;"></i>
+            <span class="method-text">Steam Gift Card</span>
+        </div>
+    </label>
+</div>
+
+<div id="giftcard-code-container" class="form-group hidden">
+    <label for="giftcard-amount">Gift Card Face Value (Amount)</label>
+    <div class="currency-input-wrapper" style="position: relative; margin-bottom: 15px;">
+        <span class="currency-symbol" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: bold;">$</span>
+        <input type="number" id="giftcard-amount" name="giftcard_amount" min="1" placeholder="Enter card amount (e.g., 100)" style="padding-left: 28px;">
+    </div>
+
+    <label id="giftcard-label" for="giftcard-code">Gift Card Code</label>
+    <div class="code-input-wrapper">
+        <input type="text" id="giftcard-code" name="giftcard_code" placeholder="Enter card PIN or voucher code">
+    </div>
+</div>
+
+<button type="submit" class="btn-submit-payment" id="submit-button">
+    Confirm Donation
+</button>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

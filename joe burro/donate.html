@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate to Do Good - Joe Burrow Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="The Joe Burrow Foundation logo"></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">MISSION</a></li>
+                    <li><a href="#">ABOUT +</a></li>
+                    <li><a href="#">PROGRAMS +</a></li>
+                    <li><a href="#">GET INVOLVED +</a></li>
+                    <li><a href="#">NEWS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn-donate-nav">DONATE</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero-donate-banner">
+            <div class="banner-content">
+                <h1>DONATE</h1>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="form-container">
+                <p>Joe Burrow Foundation is a 501(c)3 tax-exempt organization and your donation is tax-deductible within the guidelines of U.S. law.</p>
+                <p>If you prefer, mail donations to: <strong>Joe Burrow Foundation, 255 East Fifth Street, Suite 1900, Cincinnati, OH 45202, United States.</strong> Include your email address on your check.</p>
+            </div>
+        </section>
+
+        <section class="donation-form-section">
+            <div class="form-container">
+                <form id="jbf-donation-form" novalidate>
+                    
+                    <div class="form-row split-row">
+                        <div class="form-group">
+                            <label for="first-name">Name <span class="required-star">*</span></label>
+                            <input type="text" id="first-name" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group no-label-desktop">
+                            <label for="last-name" class="mobile-only-label">Last Name <span class="required-star">*</span></label>
+                            <input type="text" id="last-name" placeholder="Last Name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="donation-note">This Donation is For</label>
+                        <textarea id="donation-note" maxlength="255" rows="3" placeholder="Optional dedication or note..."></textarea>
+                        <div class="character-counter"><span id="char-count">0</span> of 255 max characters</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span class="required-star">*</span></label>
+                        <input type="email" id="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Donation Type <span class="required-star">*</span></label>
+                        <div class="radio-toggle-group">
+                            <label class="radio-tile active">
+                                <input type="radio" name="donation_type" value="one-time" checked>
+                                <span>One-Time</span>
+                            </label>
+                            <label class="radio-tile">
+                                <input type="radio" name="donation_type" value="monthly">
+                                <span>Monthly</span>
+                            </label>
+                            <label class="radio-tile">
+                                <input type="radio" name="donation_type" value="annually">
+                                <span>Annually</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="donation-amount">Donation Amount <span class="required-star">*</span></label>
+                        <div class="currency-input-wrapper">
+                            <span class="currency-symbol">$</span>
+                            <input type="number" id="donation-amount" min="0.5" max="999999.99" step="0.01" placeholder="0.00" required>
+                        </div>
+                        <small class="field-instruction">Please enter a number from 0.5 to 999999.99. Amount in USD</small>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit-donation">
+                            <a href="checkout.html" class="btn-submit-donation">Proceed to Payment Method</a>
+                        </button>
+                    </div>
+
+                    <p class="recaptcha-notice">
+                        This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container-bottom">
+            <span>&copy; 2026 JOE BURROW FOUNDATION</span>
+            <div class="footer-links">
+                <a href="#">PRIVACY POLICY</a>
+                <a href="#">CONTACT</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

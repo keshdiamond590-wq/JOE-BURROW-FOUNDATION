@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Joe Burrow Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="The Joe Burrow Foundation logo"></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="mission.html">MISSION</a></li>
+                    <li><a href="contact.html" class="active">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="donate.html" class="btn-donate-nav">DONATE</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="contact-section">
+            <div class="contact-container">
+                <h2>GET IN TOUCH</h2>
+                <p class="contact-subtitle">Have questions or want to support our mission? Reach out to us directly.</p>
+
+                <div class="quick-connect-channels">
+                    <a href="https://t.me/your_telegram_username" target="_blank" class="channel-card telegram-card">
+                        <i class="fa-brands fa-telegram"></i>
+                        <div>
+                            <h4>Message on Telegram</h4>
+                            <span>@your_telegram_username</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="separator"><span>OR SEND AN EMAIL</span></div>
+
+                <form id="contact-email-form">
+                    <div class="form-group">
+                        <label for="contact-name">Your Name</label>
+                        <input type="text" id="contact-name" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" placeholder="Partnership, Volunteering, Inquiry..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit-contact">
+                        Open Email Client <i class="fa-solid fa-envelope"></i>
+                    
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('contact-email-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Your target email address goes here
+            const targetEmail = "management4490@gmail.com"; 
+            
+            const name = encodeURIComponent(document.getElementById('contact-name').value);
+            const subject = encodeURIComponent(document.getElementById('contact-subject').value);
+            const message = encodeURIComponent(document.getElementById('contact-message').value);
+            
+            // Constructing a mailto link with formatting breaks
+            const bodyContent = `Hello, %0D%0A%0D%0AMy name is ${name}.%0D%0A%0D%0A${message}`;
+            
+            // Triggers the user's default app (Outlook, Mail, Gmail) pre-filled
+            window.location.href = `mailto:${targetEmail}?subject=${subject}&body=${bodyContent}`;
+        });
+    </script>
+</body>
+</html>

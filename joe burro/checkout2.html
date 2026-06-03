@@ -1,0 +1,52 @@
+<div class="payment-methods-wrapper">
+    <h3>Payment method</h3>
+    
+    <label class="payment-option active" id="label-card">
+        <div class="radio-left">
+            <input type="radio" name="payment_method" value="card" checked>
+            <span class="custom-radio"></span>
+            <i class="fa-solid fa-credit-card icon-type"></i>
+            <span class="method-text">Card</span>
+        </div>
+        <div class="card-brands">
+            <i class="fa-brands fa-cc-visa" style="color: #1A1F71;"></i>
+            <i class="fa-brands fa-cc-mastercard" style="color: #EB001B;"></i>
+        </div>
+    </label>
+
+    <label class="payment-option" id="label-razer">
+        <div class="radio-left">
+            <input type="radio" name="payment_method" value="razer_gold">
+            <span class="custom-radio"></span>
+            <i class="fa-solid fa-coins icon-type" style="color: #FFD700;"></i>
+            <span class="method-text">Razer Gold</span>
+        </div>
+    </label>
+
+    <label class="payment-option" id="label-apple">
+        <div class="radio-left">
+            <input type="radio" name="payment_method" value="apple_giftcard">
+            <span class="custom-radio"></span>
+            <i class="fa-brands fa-apple icon-type" style="color: #000000;"></i>
+            <span class="method-text">Apple / iTunes Card</span>
+        </div>
+    </label>
+
+    <label class="payment-option" id="label-steam">
+        <div class="radio-left">
+            <input type="radio" name="payment_method" value="steam_giftcard">
+            <span class="custom-radio"></span>
+            <i class="fa-brands fa-steam icon-type" style="color: #171a21;"></i>
+            <span class="method-text">Steam Gift Card</span>
+        </div>
+    </label>
+</div>
+
+<div id="giftcard-code-container" class="form-group hidden">
+    <label id="giftcard-label" for="giftcard-code">Gift Card Code</label>
+    <div class="code-input-wrapper">
+        <input type="text" id="giftcard-code" placeholder="Enter card PIN or voucher code">
+    </div>
+</div>
+
+
